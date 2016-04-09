@@ -1,4 +1,5 @@
 var Discord = require("discord.js");
+var Constants = require("./constants");
 var bot = new Discord.Client();
 require('dotenv').config();
 
@@ -9,7 +10,7 @@ var commandHandler = require("./commands/commandhandler.js");
 
 bot.on("ready", function() {
     setTimeout(function() {
-        console.log("Nachtkast-bot started. Ready for action!");
+        console.log(bot.user.username + " started. Ready for action!");
 
         // Load commands
         commandHandler.init(bot);
