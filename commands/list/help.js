@@ -4,7 +4,7 @@ let data = require('./../data');
 let util = require('./../util');
 
 var info = module.exports = {
-    identifier: "info",
+    identifier: "help",
     invoke: function() {
         let bot = arguments[0];
         let message = arguments[1];
