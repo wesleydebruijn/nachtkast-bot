@@ -7,8 +7,8 @@ var Server = {
 exports.Server = Server;
 
 var Status = {
-        IDLE: "Idle",
-        ONLINE: "Online"
+        IDLE: "idle",
+        ONLINE: "online"
 };
 
 exports.Status = Status;

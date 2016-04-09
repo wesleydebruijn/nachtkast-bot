@@ -1,5 +1,6 @@
 var util = require('./util');
 var data = require('./data');
+var Constants = require("./../constants");
 
 var commandhandler = module.exports = {
     bot: null,
@@ -14,7 +15,7 @@ var commandhandler = module.exports = {
             var args = msg.split(" ");
             var cmd = data.commands[args[0].substring(1, msg.length)];
             if (cmd != null) {
-                if(process.env.STATUS != "Idle" || (args[0] == "/status" && process.env.STATUS == "Idle")) {
+                if(process.env.STATUS != Constants.Status.IDLE || (args[0] == "/status" && process.env.STATUS == Constants.Status.IDLE)) {
                     cmd.invoke(bot, message, args);
 
                     // Delete the message that invoked the command

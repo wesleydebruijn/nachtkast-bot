@@ -25,7 +25,7 @@ bot.on("message", function(message) {
 });
 
 bot.on("presence", function(oldUser, user) {
-    if(process.env.STATUS != "Idle") {
+    if(process.env.STATUS != Constants.Status.IDLE) {
         onGameChange.presence(user);
     }
 });

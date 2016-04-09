@@ -1,7 +1,6 @@
 var Constants = require("./../constants");
 
 var onGameChange = module.exports = {
-    channelId: null,
     bot: null,
     server: null,
     waitChannel: null,
@@ -39,15 +38,11 @@ var onGameChange = module.exports = {
                     // create new game channel
                     bot.createChannel(server, channelName, "voice", function(err, channel) {
                         // move user to channel
-                        bot.moveMember(user, channel, function(err) {
-                            console.log(err);
-                        });
+                        bot.moveMember(user, channel);
                     });
                 } else {
                     // move user to channel
-                    bot.moveMember(user, gameChannel, function(err) {
-                        console.log(err);
-                    });
+                    bot.moveMember(user, gameChannel);
                 }
             }
         }

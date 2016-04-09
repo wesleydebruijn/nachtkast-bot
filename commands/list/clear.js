@@ -30,7 +30,7 @@ var info = module.exports = {
             }
         }
 
-        bot.sendMessage(message.channel, message.author.username + " cleared " + limit + " messages in " + textChannel + ".", { tts: false }, function(err, message) {
+        bot.sendMessage(message.channel, message.author.mention() + " cleared " + limit + " messages in " + textChannel + ". (╯°□°）╯︵ ┻━┻", { tts: false }, function(err, message) {
             if(err) console.log(err);
         });
     }
