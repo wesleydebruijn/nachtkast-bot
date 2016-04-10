@@ -14,31 +14,28 @@ var Status = {
 exports.Status = Status;
 
 var Permissions = {
-        // general
-        createInstantInvite,
-        kickMembers,
-        banMembers,
-        manageRoles,
-        managePermissions,
-        manageChannels,
-        manageChannel,
-        manageServer,
-        // text
-        readMessages,
-        sendMessages,
-        sendTTSMessages,
-        manageMessages,
-        embedLinks,
-        attachFiles,
-        readMessageHistory,
-        mentionEveryone,
-        // voice
-        voiceConnect,
-        voiceSpeak,
-        voiceMuteMembers,
-        voiceDeafenMembers,
-        voiceMoveMembers,
-        voiceUseVAD
+        createInstantInvite: "createInstantInvite",
+        kickMembers: "kickMembers",
+        banMembers: "banMembers",
+        manageRoles: "manageRoles",
+        managePermissions: "managePermissions",
+        manageChannels: "manageChannels: ",
+        manageChannel: "manageChannel",
+        manageServer: "manageServer",
+        readMessages: "readMessages",
+        sendMessages: "sendMessages",
+        sendTTSMessages: "sendTTSMessages",
+        manageMessages: "manageMessages",
+        embedLinks: "embedLinks",
+        attachFiles: "attachFiles",
+        readMessageHistory: "readMessageHistory",
+        mentionEveryone: "mentionEveryone",
+        voiceConnect: "voiceConnect",
+        voiceSpeak: "voiceSpeak",
+        voiceMuteMembers: "voiceMuteMembers",
+        voiceDeafenMembers: "voiceDeafenMembers",
+        voiceMoveMembers: "voiceMoveMembers",
+        voiceUseVAD: "voiceUseVAD"
 };
 
 exports.Permissions = Permissions;
