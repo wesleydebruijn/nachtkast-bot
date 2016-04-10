@@ -5,6 +5,7 @@ let util = require('./../util');
 
 var info = module.exports = {
     identifier: "help",
+    permission: Constants.Permissions.sendMessages,
     invoke: function() {
         let bot = arguments[0];
         let message = arguments[1];

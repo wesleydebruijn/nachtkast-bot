@@ -12,3 +12,33 @@ var Status = {
 };
 
 exports.Status = Status;
+
+var Permissions = {
+        // general
+        createInstantInvite,
+        kickMembers,
+        banMembers,
+        manageRoles,
+        managePermissions,
+        manageChannels,
+        manageChannel,
+        manageServer,
+        // text
+        readMessages,
+        sendMessages,
+        sendTTSMessages,
+        manageMessages,
+        embedLinks,
+        attachFiles,
+        readMessageHistory,
+        mentionEveryone,
+        // voice
+        voiceConnect,
+        voiceSpeak,
+        voiceMuteMembers,
+        voiceDeafenMembers,
+        voiceMoveMembers,
+        voiceUseVAD
+};
+
+exports.Permissions = Permissions;

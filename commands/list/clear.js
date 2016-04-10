@@ -2,9 +2,11 @@
 
 let data = require('./../data');
 let util = require('./../util');
+var Constants = require("./../constants");
 
 var info = module.exports = {
     identifier: "clear",
+    permission: Constants.Permissions.manageChannels,
     invoke: function() {
         let bot = arguments[0];
         let message = arguments[1];
