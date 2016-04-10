@@ -6,7 +6,7 @@ let Constants = require('./../../constants');
 
 var info = module.exports = {
     identifier: "status",
-    permission: Constants.Permissions.manageRoles,
+    permission: Constants.Permissions.managePermissions,
     invoke: function() {
         let bot = arguments[0];
         let status = arguments[2][1];

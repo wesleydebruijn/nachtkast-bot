@@ -6,7 +6,7 @@ let Constants = require('./../../constants');
 
 var info = module.exports = {
     identifier: "clear",
-    permission: Constants.Permissions.manageChannels,
+    permission: Constants.Permissions.manageChannel,
     invoke: function() {
         let bot = arguments[0];
         let message = arguments[1];
@@ -19,21 +19,23 @@ var info = module.exports = {
 
         if(textChannel != null) {
             var channel = bot.channels.get("name", textChannel);
-            if(channel.type != "voice") {
-                bot.getChannelLogs(channel, limit, {}, function(err, messages) {
-                    if(err) console.log(err);
-                    for(var key in messages) {
-                        var msg = messages[key];
-                        bot.deleteMessage(msg, function(err) {
-                            if(err) console.log(err);
-                        });
-                    }
-                });
+            if(channel != null) {
+                if(channel.type != "voice") {
+                    bot.getChannelLogs(channel, limit, {}, function(err, messages) {
+                        if(err) console.log(err);
+                        for(var key in messages) {
+                            var msg = messages[key];
+                            bot.deleteMessage(msg, function(err) {
+                                if(err) console.log(err);
+                            });
+                        }
+                    });
+
+                    bot.sendMessage(message.channel, message.author.mention() + " cleared " + limit + " messages in " + textChannel + ". (╯°□°）╯︵ ┻━┻", { tts: false }, function(err, message) {
+                        if(err) console.log(err);
+                    });
+                }
             }
         }
-
-        bot.sendMessage(message.channel, message.author.mention() + " cleared " + limit + " messages in " + textChannel + ". (╯°□°）╯︵ ┻━┻", { tts: false }, function(err, message) {
-            if(err) console.log(err);
-        });
     }
 }

@@ -19,7 +19,7 @@ var Permissions = {
         banMembers: "banMembers",
         manageRoles: "manageRoles",
         managePermissions: "managePermissions",
-        manageChannels: "manageChannels: ",
+        manageChannels: "manageChannels",
         manageChannel: "manageChannel",
         manageServer: "manageServer",
         readMessages: "readMessages",

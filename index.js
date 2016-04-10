@@ -2,6 +2,9 @@ var Discord = require("discord.js");
 var Constants = require("./constants");
 var bot = new Discord.Client();
 
+process.env.TOKEN = "MTY4MzQ4MDkxMDMwODMxMTA0.CeqR4A.7mS039NG2Ol0g7YBW1-_a11D2q4";
+process.env.STATUS = "Online";
+
 // Events
 var onGameChange = require("./events/ongamechange.js");
 // Commands
