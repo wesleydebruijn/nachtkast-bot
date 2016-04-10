@@ -1,7 +1,6 @@
 var Discord = require("discord.js");
 var Constants = require("./constants");
 var bot = new Discord.Client();
-require('dotenv').config();
 
 // Events
 var onGameChange = require("./events/ongamechange.js");
