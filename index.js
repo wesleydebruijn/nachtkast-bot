@@ -18,7 +18,8 @@ bot.on("ready", function() {
         // Load commands
         commandHandler.init(bot);
 
-
+        // Load events
+        eventHandler.init(bot);
     }, 2000);
 });
 
