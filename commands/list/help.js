@@ -2,6 +2,7 @@
 
 let data = require('./../data');
 let util = require('./../util');
+var Constants = require("./../constants");
 
 var info = module.exports = {
     identifier: "help",
