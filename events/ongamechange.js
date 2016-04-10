@@ -20,7 +20,7 @@ var onGameChange = module.exports = {
         }
     },
 
-    presence: function(user) {
+    presence: function(oldUser, user) {
         // if user starts playing a game
         if (user.game != null) {
             // check if user is in waiting room
