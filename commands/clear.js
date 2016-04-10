@@ -1,17 +1,13 @@
-"use strict";
-
-let data = require('./../data');
-let util = require('./../util');
-let Constants = require('./../../constants');
+var Constants = require('./../constants');
 
 var info = module.exports = {
     identifier: "clear",
     permission: Constants.Permissions.manageChannel,
     invoke: function() {
-        let bot = arguments[0];
-        let message = arguments[1];
-        let textChannel = arguments[2][1];
-        let limit = arguments[2][2];
+        var bot = arguments[0];
+        var message = arguments[1];
+        var textChannel = arguments[2][1];
+        var limit = arguments[2][2];
 
         if(limit > 50) {
             limit = 50;

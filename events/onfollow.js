@@ -16,9 +16,7 @@ var onFollow = module.exports = {
             if(bot.custom.follow != null && bot.custom.follow.active) {
                 // check if user is being followed
                 var follow = bot.custom.follow;
-                console.log(user);
                 if(follow.user.id == user.id) {
-                    console.log(channel);
                     bot.joinVoiceChannel(channel);
                 }
             }

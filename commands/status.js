@@ -1,15 +1,11 @@
-"use strict";
-
-let data = require('./../data');
-let util = require('./../util');
-let Constants = require('./../../constants');
+var Constants = require('./../constants');
 
 var info = module.exports = {
     identifier: "status",
     permission: Constants.Permissions.managePermissions,
     invoke: function() {
-        let bot = arguments[0];
-        let status = arguments[2][1];
+        var bot = arguments[0];
+        var status = arguments[2][1];
 
         switch(status) {
             case Constants.Status.IDLE:

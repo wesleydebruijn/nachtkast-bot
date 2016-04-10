@@ -1,25 +1,16 @@
-"use strict";
+var fs = require("fs");
 
-let fs = require("fs");
-let data = require("./data");
-
-var util = module.exports = {
-
-    /*
-    * Loads all commands into an array so it can be accessed by its identifier
-    *
-    * @return array of commands
-    */
+var commands = module.exports = {
     loadCommands: function() {
-        let commands = fs.readdirSync('./commands/list');
-        let cmdArray = {};
+        var commands = fs.readdirSync('./commands');
+        var cmdArray = {};
 
         if(commands.length > 0) {
             commands.forEach(function(command) {
                 var moduleString = command.substring(0, command.length - 3);
                 commands.push(moduleString);
 
-                var cmd = require('./list/' + moduleString);
+                var cmd = require('./../commands/' + moduleString);
                 cmdArray[cmd.identifier] = cmd;
             });
         }

@@ -1,15 +1,11 @@
-"use strict";
-
-let data = require('./../data');
-let util = require('./../util');
-let Constants = require('./../../constants');
+var Constants = require('./../constants');
 
 var info = module.exports = {
     identifier: "follow",
     permission: Constants.Permissions.manageChannel,
     invoke: function() {
-        let bot = arguments[0];
-        let message = arguments[1];
+        var bot = arguments[0];
+        var message = arguments[1];
 
         // set event value active
         bot.custom.follow = {
