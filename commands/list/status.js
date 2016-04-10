@@ -14,14 +14,14 @@ var info = module.exports = {
         switch(status) {
             case Constants.Status.IDLE:
                 bot.setStatus(Constants.Status.IDLE, "", function(err) {
-                    if(err) console.log("Error changing status: " + err);
+                    if(err && process.env.DEBUG) console.log("Error changing status: " + err);
                 });
 
                 process.env.STATUS = Constants.Status.IDLE;
                 break;
             case Constants.Status.ONLINE:
                 bot.setStatus(Constants.Status.ONLINE, "", function(err) {
-                    if(err) console.log("Error changing status: " + err);
+                    if(err && process.env.DEBUG) console.log("Error changing status: " + err);
                 });
 
                 process.env.STATUS = Constants.Status.ONLINE;

@@ -12,7 +12,7 @@ var info = module.exports = {
         let message = arguments[1];
 
         bot.sendMessage(message.channel, "Test message", { tts: false }, function(err, message) {
-            if(err) console.log(err);
+            if(err && process.env.DEBUG) console.log(err);
         });
     }
 }

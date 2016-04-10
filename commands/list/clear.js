@@ -26,13 +26,13 @@ var info = module.exports = {
                         for(var key in messages) {
                             var msg = messages[key];
                             bot.deleteMessage(msg, function(err) {
-                                if(err) console.log(err);
+                                if(err && process.env.DEBUG) console.log(err);
                             });
                         }
                     });
 
                     bot.sendMessage(message.channel, message.author.mention() + " cleared " + limit + " messages in " + textChannel + ". (╯°□°）╯︵ ┻━┻", { tts: false }, function(err, message) {
-                        if(err) console.log(err);
+                        if(err && process.env.DEBUG) console.log(err);
                     });
                 }
             }

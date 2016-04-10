@@ -21,7 +21,7 @@ var commandhandler = module.exports = {
 
                     // Delete the message that invoked the command
                     bot.deleteMessage(message, function(err) {
-                        if(err) console.log(err);
+                        if(err && process.env.DEBUG) console.log(err);
                     });
                 }
             }
