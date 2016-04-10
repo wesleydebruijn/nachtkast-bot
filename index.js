@@ -3,7 +3,7 @@ var Constants = require("./constants");
 var bot = new Discord.Client();
 
 // Events
-var onGameChange = require("./eventas/ongamechange.js");
+var onGameChange = require("./events/ongamechange.js");
 // Commands
 var commandHandler = require("./commands/commandhandler.js");
 
