@@ -9,7 +9,7 @@ var info = module.exports = {
         let bot = arguments[0];
         let message = arguments[1];
 
-        bot.sendMessage(message.channel, "Debug message", { tts: false }, function(err, message) {
+        bot.sendMessage(message.channel, "Test message", { tts: false }, function(err, message) {
             if(err) console.log(err);
         });
     }
