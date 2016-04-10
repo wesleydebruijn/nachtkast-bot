@@ -1,6 +1,6 @@
 var Constants = require('./../constants');
 
-var info = module.exports = {
+var status = module.exports = {
     identifier: "status",
     permission: Constants.Permissions.managePermissions,
     invoke: function() {

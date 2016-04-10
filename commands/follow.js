@@ -1,6 +1,6 @@
 var Constants = require('./../constants');
 
-var info = module.exports = {
+var follow = module.exports = {
     identifier: "follow",
     permission: Constants.Permissions.manageChannel,
     invoke: function() {

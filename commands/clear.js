@@ -1,6 +1,6 @@
 var Constants = require('./../constants');
 
-var info = module.exports = {
+var clear = module.exports = {
     identifier: "clear",
     permission: Constants.Permissions.manageChannel,
     invoke: function() {

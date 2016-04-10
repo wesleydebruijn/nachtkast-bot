@@ -1,6 +1,6 @@
 var Constants = require('./../constants');
 
-var info = module.exports = {
+var help = module.exports = {
     identifier: "help",
     permission: Constants.Permissions.sendMessages,
     invoke: function() {
