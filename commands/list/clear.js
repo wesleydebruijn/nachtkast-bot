@@ -31,7 +31,7 @@ var info = module.exports = {
                         }
                     });
 
-                    bot.sendMessage(message.channel, message.author.mention() + " cleared " + limit + " messages in " + textChannel + ". (╯°□°）╯︵ ┻━┻", { tts: false }, function(err, message) {
+                    bot.reply(message, " cleared " + limit + " messages in " + textChannel + ". (╯°□°）╯︵ ┻━┻", { tts: false }, function(err, message) {
                         if(err && process.env.DEBUG) console.log(err);
                     });
                 }

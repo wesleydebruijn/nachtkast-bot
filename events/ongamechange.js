@@ -16,13 +16,8 @@ var onGameChange = module.exports = {
             // create new wait channel
             bot.createChannel(server, Constants.Server.waitChannelName, "voice", function(err, channel) {
                 waitChannel = channel;
-
-                // join wait channel
-                bot.joinVoiceChannel(waitChannel);
             });
         }
-        // join wait channel
-        bot.joinVoiceChannel(waitChannel);
     },
 
     presence: function(user) {
