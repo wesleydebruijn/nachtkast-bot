@@ -13,13 +13,10 @@ var follow = module.exports = {
             user: message.author
         };
 
-        // leave current channel
-        bot.leaveVoiceChannel().then(function() {
-            // join channel of user
-            bot.joinVoiceChannel(message.author.voiceChannel).then(function() {
-                bot.reply(message, " I'm now following you everywhere ( ͡° ͜ʖ ͡°)", { tts: false }, function(err, message) {
-                    if(err && process.env.DEBUG) console.log(err);
-                });
+        // join channel of user
+        bot.joinVoiceChannel(message.author.voiceChannel).then(function() {
+            bot.reply(message, " I'm now following you everywhere ( ͡° ͜ʖ ͡°)", { tts: false }, function(err, message) {
+                if(err && process.env.DEBUG) console.log(err);
             });
         });
     }

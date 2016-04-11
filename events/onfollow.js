@@ -17,12 +17,7 @@ var onFollow = module.exports = {
                 // check if user is being followed
                 var follow = bot.custom.follow;
                 if(follow.user.id == user.id) {
-                    console.log("left channel");
-                    bot.joinVoiceChannel(channel).then(function() {
-                        console.log("joined");
-                    }).catch(function() {
-                        console.log("sochtends heel veel kanker koffie");
-                    });
+                    bot.joinVoiceChannel(channel);
                 }
             }
         }
