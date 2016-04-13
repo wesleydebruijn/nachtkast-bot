@@ -1,7 +1,8 @@
 var Server = {
     id: 129603375535751168,
     waitChannelName: "Gaming room",
-    waitChannelPrefix: "#"
+    waitChannelPrefix: "#",
+    defaultGame: "League of Feederino"
 };
 
 exports.Server = Server;
