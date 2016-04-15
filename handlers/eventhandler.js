@@ -1,5 +1,5 @@
 var Constants = require("./../constants");
-var EventsUtil = require("./../util/events");
+var EventsUtil = require("./../helpers/events");
 
 var eventHandler = module.exports = {
     bot: null,

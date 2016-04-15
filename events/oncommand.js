@@ -1,6 +1,6 @@
 var Constants = require("./../constants");
 var CommandHandler = require("./../handlers/commandhandler");
-var CommandsUtil = require("./../util/commands");
+var CommandsUtil = require("./../helpers/commands");
 
 var onCommand = module.exports = {
     bot: null,

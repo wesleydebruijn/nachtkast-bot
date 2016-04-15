@@ -1,4 +1,4 @@
-var CommandsUtil = require("./../util/commands");
+var CommandsUtil = require("./../helpers/commands");
 var Constants = require("./../constants");
 
 var commandhandler = module.exports = {
