@@ -11,27 +11,33 @@ var help = module.exports = {
         fs.readFile('./resources/cpp_reference.json', 'utf8', (err, data) => {
             this.keywords = JSON.parse(data);
         });
-
     },
     invoke: function() {
         var bot = arguments[0];
         var message = arguments[1];
         var keyword = arguments[2][1];
+        var specified = arguments[2][2];
         var reply = "";
         var haystack = this.search(keyword);
 
         if(haystack.length == 0) {
             reply = "no matches found.";
         } else if(haystack.length > 1) {
-            reply = "did you mean any of these? " + haystack.map((hay) => {
-                return " " + hay.name;
-            });
-        } else {
-            this.fetchSnippet(haystack[0].url, function(err, snippet) {
-                bot.reply(message, "```" + snippet + "```", { tts: false }, (err, message) => {
-                    if(err) console.log(err);
+            if(typeof(specified) != 'undefined') {
+                var selected = null;
+                haystack.map((reference) => {
+                    if(reference.category.indexOf(specified) > 0) {
+                        selected = reference;
+                    }
                 });
-            });
+                this.sendMessage(message, selected);
+            } else {
+                reply = "did you mean any of these? " + haystack.map((hay) => {
+                    return " " + hay.name + "(" + hay.category + ")";
+                });
+            }
+        } else {
+            this.sendMessage(message, haystack[0]);
         }
 
         if(reply.length > 0) {
@@ -77,6 +83,14 @@ var help = module.exports = {
             } else {
                 cb(error, null);
             }
+        });
+    },
+
+    sendMessage: function(message, reference) {
+        this.fetchSnippet(reference.url, function(err, snippet) {
+            bot.reply(message, "```" + snippet + "```" + "\n" + reference.url, { tts: false }, (err, message) => {
+                if(err) console.log(err);
+            });
         });
     }
 }
