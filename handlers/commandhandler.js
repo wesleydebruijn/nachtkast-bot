@@ -1,11 +1,11 @@
-var CommandsUtil = require("./../helpers/commands");
+var CommandHelper = require("./../helpers/commands");
 var Constants = require("./../constants");
 
 var commandhandler = module.exports = {
     bot: null,
     commandsList: null,
     init: function(client) {
-        commandsList = CommandsUtil.loadCommands();
+        commandsList = CommandHelper.loadCommands();
         bot = client;
     },
 

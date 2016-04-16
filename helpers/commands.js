@@ -11,6 +11,9 @@ var commands = module.exports = {
                 commands.push(moduleString);
 
                 var cmd = require('./../commands/' + moduleString);
+                if(cmd.hasOwnProperty('init')) {
+                    cmd.init();
+                };
                 cmdArray[cmd.identifier] = cmd;
             });
         }
