@@ -3,7 +3,7 @@ var request = require('request');
 var fs = require('fs');
 
 var help = module.exports = {
-    identifier: "weer",
+    identifier: "weather",
     permission: Constants.Permissions.sendMessages,
     invoke: function() {
         var bot = arguments[0];
